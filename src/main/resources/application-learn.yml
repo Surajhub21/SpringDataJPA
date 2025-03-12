@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${SPRING_DATA_JPA_URL}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
+    driver-class-name: ${POSTGRESQL_DRIVER}
+
+  jpa:
+    database-platform: ${POSTGRESQL_PLATFORM}
+    hibernate:
+      ddl-auto: update
+    show-sql: true
