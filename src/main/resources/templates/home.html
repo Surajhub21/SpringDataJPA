@@ -127,7 +127,7 @@
         formData.append('imageFile', imageFile);
 
         try {
-            const response = await fetch('http://localhost:8080/c', {
+            const response = await fetch('https://springdatajpa.onrender.com/c', {
                 method: 'POST',
                 body: formData
             });
@@ -151,7 +151,7 @@ async function fetchStudents() {
     tableBody.innerHTML = `<tr><td colspan="5">Loading...</td></tr>`;
 
     try {
-        const response = await fetch('http://localhost:8080/gl');
+        const response = await fetch('https://springdatajpa.onrender.com/gl');
         const students = await response.json();
 
         tableBody.innerHTML = '';
@@ -163,7 +163,7 @@ async function fetchStudents() {
                 <td>${student.name}</td>
                 <td>${student.tech}</td>
                 <td>
-                    <img src="http://localhost:8080/img/${student.id}"
+                    <img src="https://springdatajpa.onrender.com/img/${student.id}"
                     alt="Student Image"
                     style="width: 60px; height: 60px; border-radius: 50%;">
                 </td>
@@ -184,7 +184,7 @@ async function deleteStudent(id) {
     if (!confirm("Are you sure you want to delete this student?")) return;
 
     try {
-        const response = await fetch(`http://localhost:8080/del/${id}`, {
+        const response = await fetch(`https://springdatajpa.onrender.com/del/${id}`, {
             method: 'DELETE'
         });
 
