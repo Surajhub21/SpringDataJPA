@@ -18,7 +18,7 @@ FROM openjdk:21-slim
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/target/SpringDataJps-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /app/target/SpringDataJpa-0.0.1-SNAPSHOT.jar demo.jar
 
 # Expose the application port
 EXPOSE 8080
